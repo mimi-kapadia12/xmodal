@@ -20,12 +20,8 @@ export function Modal({ closeModal }) {
 
   const HandleSubmit = (event) => {
     event.preventDefault();
-    if (
-      form.username === "" ||
-      form.phoneNo === "" ||
-      form.dob === null ||
-      form.email === ""
-    ) {
+
+    if (form.username === "" || form.phoneNo === "" || form.email === "") {
       return;
     }
 
