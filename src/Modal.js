@@ -7,7 +7,7 @@ export function Modal({ closeModal }) {
     username: "",
     email: "",
     dob: null,
-    phoneNo: "",
+    phone: "",
   });
 
   const handleChange = (event) => {
@@ -23,7 +23,7 @@ export function Modal({ closeModal }) {
 
     if (
       form.username === "" ||
-      form.phoneNo === "" ||
+      form.phone === "" ||
       form.email === "" ||
       !form.dob
     ) {
@@ -35,7 +35,7 @@ export function Modal({ closeModal }) {
       return;
     }
 
-    if (!/^\d{10}$/.test(form.phoneNo)) {
+    if (!/^\d{10}$/.test(form.phone)) {
       alert("Invalid phone number. Please enter a 10-digit phone number.");
       return;
     }
@@ -50,7 +50,7 @@ export function Modal({ closeModal }) {
       username: "",
       email: "",
       dob: null,
-      phoneNo: "",
+      phone: "",
     });
 
     closeModal(); // Close the modal only if all validations pass
@@ -105,8 +105,8 @@ export function Modal({ closeModal }) {
                 <input
                   type="text"
                   className="form-control"
-                  id="phoneNo"
-                  value={form.phoneNo}
+                  id="phone"
+                  value={form.phone}
                   onChange={handleChange}
                   required
                 />
