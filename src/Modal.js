@@ -81,7 +81,6 @@ export function Modal({ closeModal }) {
                   id="username"
                   value={form.username}
                   onChange={handleChange}
-                  required
                 />
               </div>
               <div className="form-group">
@@ -92,7 +91,6 @@ export function Modal({ closeModal }) {
                   id="email"
                   value={form.email}
                   onChange={handleChange}
-                  required
                 />
               </div>
               <div className="form-group">
@@ -103,7 +101,6 @@ export function Modal({ closeModal }) {
                   id="phoneNo"
                   value={form.phoneNo}
                   onChange={handleChange}
-                  required
                 />
               </div>
               <div className="form-group">
