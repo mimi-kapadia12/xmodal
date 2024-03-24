@@ -45,13 +45,14 @@ export function Modal({ closeModal }) {
       return;
     }
 
-    //closeModal(); // Close the modal only if all validations pass
     setForm({
       username: "",
       email: "",
       dob: null,
       phoneNo: "",
     });
+
+    closeModal(); // Close the modal only if all validations pass
   };
 
   useEffect(() => {
@@ -120,7 +121,7 @@ export function Modal({ closeModal }) {
                   required
                 />
               </div>
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="submit-button btn btn-primary">
                 Submit
               </button>
             </form>
