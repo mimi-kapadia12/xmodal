@@ -21,7 +21,12 @@ export function Modal({ closeModal }) {
   const HandleSubmit = (event) => {
     event.preventDefault();
 
-    if (form.username === "" || form.phoneNo === "" || form.email === "") {
+    if (
+      form.username === "" ||
+      form.phoneNo === "" ||
+      form.email === "" ||
+      !form.dob
+    ) {
       return;
     }
 
@@ -81,6 +86,7 @@ export function Modal({ closeModal }) {
                   id="username"
                   value={form.username}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div className="form-group">
@@ -91,6 +97,7 @@ export function Modal({ closeModal }) {
                   id="email"
                   value={form.email}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div className="form-group">
@@ -101,6 +108,7 @@ export function Modal({ closeModal }) {
                   id="phoneNo"
                   value={form.phoneNo}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div className="form-group">
@@ -111,6 +119,7 @@ export function Modal({ closeModal }) {
                   id="dob"
                   value={form.dob || ""}
                   onChange={(e) => setForm({ ...form, dob: e.target.value })}
+                  required
                 />
               </div>
               <button type="submit" className="submit-button btn btn-primary">
